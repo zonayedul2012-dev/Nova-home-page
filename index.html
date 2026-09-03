@@ -16,10 +16,7 @@
 
   <header class="browser-top">
     <div class="tab-strip" id="tabStrip">
-      <button class="tab active" data-url="./"><span class="tab-dot nova-dot"></span><span>NOVA</span><span class="tab-close">×</span></button>
-      <button class="tab" data-url="https://www.youtube.com/"><span class="tab-dot youtube-dot"></span><span>YouTube</span><span class="tab-close">×</span></button>
-      <button class="tab" data-url="https://mail.google.com/"><span class="tab-dot gmail-dot"></span><span>Gmail</span><span class="tab-close">×</span></button>
-      <button class="tab" data-url="https://github.com/"><span class="tab-dot github-dot"></span><span>GitHub</span><span class="tab-close">×</span></button>
+      <button class="tab active" data-url="./"><span class="tab-dot nova-dot"></span><span class="tab-label">NOVA</span><span class="tab-close">×</span></button>
       <button class="new-tab" id="newTab" aria-label="New tab">+</button>
     </div>
     <div class="browser-controls"><button id="browserBack">‹</button><button id="browserForward">›</button><button id="browserRefresh">↻</button><a class="mini-brand" href="./">NOVA<span>.</span></a><div class="browser-time"><span id="date"></span><span class="dot"></span><span id="clock">00:00</span></div></div>
@@ -40,4 +37,5 @@
   <aside class="ai-panel" id="aiPanel" aria-label="NOVA AI"><div class="ai-header"><div class="ai-title"><span class="ai-orb"></span><div><strong>NOVA AI</strong><small>Local interface</small></div></div><button id="aiClose" aria-label="Close">×</button></div><div class="messages" id="messages"><div class="message bot">NOVA AI interface ready. This demo is not connected to an AI service yet.</div></div><form class="chat-input" id="chatForm"><input id="chatInput" type="text" placeholder="Ask something..." autocomplete="off"><button type="submit" aria-label="Send">→</button></form></aside>
   <footer><span>NOVA</span> · Personal homepage · <span id="year">2026</span></footer>
   <script src="script.js"></script>
+  <script src="tabs.js"></script>
 </body></html>
