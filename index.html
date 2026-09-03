@@ -7,6 +7,7 @@
   <meta name="description" content="NOVA — a futuristic personal homepage.">
   <title>NOVA — Home</title>
   <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ai.css">
 </head>
 <body>
   <div class="boot-screen" id="bootScreen" aria-hidden="true">
@@ -33,14 +34,12 @@
       <p class="eyebrow">YOUR DIGITAL STARTING POINT</p>
       <h1>NOVA<span>.</span></h1>
       <p class="subtitle">Search the web, open your apps, and keep everything you need one click away.</p>
-
       <form class="search" id="searchForm">
         <span class="search-icon">⌕</span>
         <input id="searchInput" type="search" autocomplete="off" placeholder="Search Google or type a URL" aria-label="Search Google">
         <kbd>Enter</kbd>
         <button type="submit">Search</button>
       </form>
-
       <div class="shortcuts" aria-label="Shortcuts">
         <a class="shortcut" href="https://www.google.com/" target="_blank" rel="noopener"><span class="icon google">G</span><span>Google</span></a>
         <a class="shortcut" href="https://www.youtube.com/" target="_blank" rel="noopener"><span class="icon youtube">▶</span><span>YouTube</span></a>
@@ -49,14 +48,13 @@
         <a class="shortcut" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="icon drive">△</span><span>Drive</span></a>
         <a class="shortcut" href="https://github.com/" target="_blank" rel="noopener"><span class="icon github">⌘</span><span>GitHub</span></a>
       </div>
-
       <button class="search-focus" id="focusSearch" type="button"><span>⌕</span> Focus search</button>
     </section>
   </main>
 
   <button class="ai-launcher" id="aiLauncher" aria-label="Open NOVA AI"><span class="ai-pulse"></span><span>AI</span></button>
 
-  <div class="ai-transition" id="aiTransition" aria-hidden="true"><div class="transition-orb"></div><div class="transition-label">CONNECTING TO NOVA AI</div></div>
+  <div class="ai-transition" id="aiTransition" aria-hidden="true"><div class="transition-orb"></div><div class="transition-label">LOADING AI</div></div>
 
   <div class="ready-modal" id="readyModal" aria-hidden="true">
     <div class="ready-card">
