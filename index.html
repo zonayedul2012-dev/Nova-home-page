@@ -3,33 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="theme-color" content="#0b0d11">
+  <meta name="theme-color" content="#07090f">
+  <meta name="description" content="NOVA — a futuristic personal homepage.">
   <title>NOVA — Home</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="ambient"></div>
+  <div class="aurora aurora-one"></div>
+  <div class="aurora aurora-two"></div>
+  <div class="grid"></div>
+  <div class="stars" id="stars"></div>
+
   <header class="topbar">
-    <div class="brand">NOVA<span>.</span></div>
+    <a class="brand" href="./" aria-label="NOVA home">NOVA<span>.</span></a>
     <div class="top-right">
       <span id="date"></span>
+      <span class="dot"></span>
       <span id="clock">00:00</span>
     </div>
   </header>
 
   <main class="home">
     <section class="hero">
-      <p class="eyebrow">YOUR STARTING POINT</p>
-      <h1>NOVA</h1>
-      <p class="subtitle">Search the web. Open your apps. Keep everything one click away.</p>
+      <div class="status"><span class="status-dot"></span> SYSTEM ONLINE</div>
+      <p class="eyebrow">YOUR DIGITAL STARTING POINT</p>
+      <h1>NOVA<span>.</span></h1>
+      <p class="subtitle">Search the web, open your apps, and keep everything you need one click away.</p>
 
       <form class="search" id="searchForm">
         <span class="search-icon">⌕</span>
         <input id="searchInput" type="search" autocomplete="off" placeholder="Search Google or type a URL" aria-label="Search Google">
+        <kbd>Enter</kbd>
         <button type="submit">Search</button>
       </form>
 
-      <div class="shortcuts">
+      <div class="shortcuts" aria-label="Shortcuts">
         <a class="shortcut" href="https://www.google.com/" target="_blank" rel="noopener"><span class="icon google">G</span><span>Google</span></a>
         <a class="shortcut" href="https://www.youtube.com/" target="_blank" rel="noopener"><span class="icon youtube">▶</span><span>YouTube</span></a>
         <a class="shortcut" href="https://www.dailymotion.com/" target="_blank" rel="noopener"><span class="icon dm">D</span><span>Dailymotion</span></a>
@@ -37,14 +45,16 @@
         <a class="shortcut" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="icon drive">△</span><span>Drive</span></a>
         <a class="shortcut" href="https://github.com/" target="_blank" rel="noopener"><span class="icon github">⌘</span><span>GitHub</span></a>
       </div>
+
+      <div class="hint"><span>Tip</span> Press <b>/</b> anytime to focus search</div>
     </section>
   </main>
 
-  <button class="ai-launcher" id="aiLauncher" aria-label="Open NOVA AI">AI</button>
+  <button class="ai-launcher" id="aiLauncher" aria-label="Open NOVA AI"><span class="ai-pulse"></span><span>AI</span></button>
 
   <aside class="ai-panel" id="aiPanel" aria-label="NOVA AI">
     <div class="ai-header">
-      <div><strong>NOVA AI</strong><small>Local interface</small></div>
+      <div class="ai-title"><span class="ai-orb"></span><div><strong>NOVA AI</strong><small>Local interface</small></div></div>
       <button id="aiClose" aria-label="Close">×</button>
     </div>
     <div class="messages" id="messages">
@@ -52,11 +62,11 @@
     </div>
     <form class="chat-input" id="chatForm">
       <input id="chatInput" type="text" placeholder="Ask something..." autocomplete="off">
-      <button type="submit">→</button>
+      <button type="submit" aria-label="Send">→</button>
     </form>
   </aside>
 
-  <footer>© 2026 NOVA · Personal homepage</footer>
+  <footer><span>NOVA</span> · Personal homepage · <span id="year">2026</span></footer>
   <script src="script.js"></script>
 </body>
 </html>
