@@ -9,6 +9,14 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="boot-screen" id="bootScreen" aria-hidden="true">
+    <div class="boot-core"><span></span><span></span><span></span></div>
+    <div class="boot-logo">NOVA<span>.</span></div>
+    <div class="boot-text" id="bootText">INITIALIZING NOVA</div>
+    <div class="boot-bar"><i id="bootProgress"></i></div>
+    <div class="boot-percent" id="bootPercent">0%</div>
+  </div>
+
   <div class="aurora aurora-one"></div>
   <div class="aurora aurora-two"></div>
   <div class="grid"></div>
@@ -16,11 +24,7 @@
 
   <header class="topbar">
     <a class="brand" href="./" aria-label="NOVA home">NOVA<span>.</span></a>
-    <div class="top-right">
-      <span id="date"></span>
-      <span class="dot"></span>
-      <span id="clock">00:00</span>
-    </div>
+    <div class="top-right"><span id="date"></span><span class="dot"></span><span id="clock">00:00</span></div>
   </header>
 
   <main class="home">
@@ -46,24 +50,32 @@
         <a class="shortcut" href="https://github.com/" target="_blank" rel="noopener"><span class="icon github">⌘</span><span>GitHub</span></a>
       </div>
 
-      <div class="hint"><span>Tip</span> Press <b>/</b> anytime to focus search</div>
+      <button class="search-focus" id="focusSearch" type="button"><span>⌕</span> Focus search</button>
     </section>
   </main>
 
   <button class="ai-launcher" id="aiLauncher" aria-label="Open NOVA AI"><span class="ai-pulse"></span><span>AI</span></button>
+
+  <div class="ai-transition" id="aiTransition" aria-hidden="true"><div class="transition-orb"></div><div class="transition-label">CONNECTING TO NOVA AI</div></div>
+
+  <div class="ready-modal" id="readyModal" aria-hidden="true">
+    <div class="ready-card">
+      <div class="ready-orb"><span></span></div>
+      <div class="ready-kicker">NOVA AI</div>
+      <h2>Are you ready?</h2>
+      <p>NOVA AI is ready to open its interface.</p>
+      <button id="readyButton" type="button">Enter NOVA AI <span>→</span></button>
+      <button class="cancel-ready" id="cancelReady" type="button">Not now</button>
+    </div>
+  </div>
 
   <aside class="ai-panel" id="aiPanel" aria-label="NOVA AI">
     <div class="ai-header">
       <div class="ai-title"><span class="ai-orb"></span><div><strong>NOVA AI</strong><small>Local interface</small></div></div>
       <button id="aiClose" aria-label="Close">×</button>
     </div>
-    <div class="messages" id="messages">
-      <div class="message bot">NOVA AI interface ready. This demo is not connected to an AI service yet.</div>
-    </div>
-    <form class="chat-input" id="chatForm">
-      <input id="chatInput" type="text" placeholder="Ask something..." autocomplete="off">
-      <button type="submit" aria-label="Send">→</button>
-    </form>
+    <div class="messages" id="messages"><div class="message bot">NOVA AI interface ready. This demo is not connected to an AI service yet.</div></div>
+    <form class="chat-input" id="chatForm"><input id="chatInput" type="text" placeholder="Ask something..." autocomplete="off"><button type="submit" aria-label="Send">→</button></form>
   </aside>
 
   <footer><span>NOVA</span> · Personal homepage · <span id="year">2026</span></footer>
