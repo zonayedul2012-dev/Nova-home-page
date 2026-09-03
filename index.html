@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b0d11">
+  <title>NOVA — Home</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="ambient"></div>
+  <header class="topbar">
+    <div class="brand">NOVA<span>.</span></div>
+    <div class="top-right">
+      <span id="date"></span>
+      <span id="clock">00:00</span>
+    </div>
+  </header>
+
+  <main class="home">
+    <section class="hero">
+      <p class="eyebrow">YOUR STARTING POINT</p>
+      <h1>NOVA</h1>
+      <p class="subtitle">Search the web. Open your apps. Keep everything one click away.</p>
+
+      <form class="search" id="searchForm">
+        <span class="search-icon">⌕</span>
+        <input id="searchInput" type="search" autocomplete="off" placeholder="Search Google or type a URL" aria-label="Search Google">
+        <button type="submit">Search</button>
+      </form>
+
+      <div class="shortcuts">
+        <a class="shortcut" href="https://www.google.com/" target="_blank" rel="noopener"><span class="icon google">G</span><span>Google</span></a>
+        <a class="shortcut" href="https://www.youtube.com/" target="_blank" rel="noopener"><span class="icon youtube">▶</span><span>YouTube</span></a>
+        <a class="shortcut" href="https://www.dailymotion.com/" target="_blank" rel="noopener"><span class="icon dm">D</span><span>Dailymotion</span></a>
+        <a class="shortcut" href="https://mail.google.com/" target="_blank" rel="noopener"><span class="icon gmail">M</span><span>Gmail</span></a>
+        <a class="shortcut" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="icon drive">△</span><span>Drive</span></a>
+        <a class="shortcut" href="https://github.com/" target="_blank" rel="noopener"><span class="icon github">⌘</span><span>GitHub</span></a>
+      </div>
+    </section>
+  </main>
+
+  <button class="ai-launcher" id="aiLauncher" aria-label="Open NOVA AI">AI</button>
+
+  <aside class="ai-panel" id="aiPanel" aria-label="NOVA AI">
+    <div class="ai-header">
+      <div><strong>NOVA AI</strong><small>Local interface</small></div>
+      <button id="aiClose" aria-label="Close">×</button>
+    </div>
+    <div class="messages" id="messages">
+      <div class="message bot">NOVA AI interface ready. This demo is not connected to an AI service yet.</div>
+    </div>
+    <form class="chat-input" id="chatForm">
+      <input id="chatInput" type="text" placeholder="Ask something..." autocomplete="off">
+      <button type="submit">→</button>
+    </form>
+  </aside>
+
+  <footer>© 2026 NOVA · Personal homepage</footer>
+  <script src="script.js"></script>
+</body>
+</html>
