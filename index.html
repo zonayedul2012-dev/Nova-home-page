@@ -10,73 +10,33 @@
   <link rel="stylesheet" href="ai.css">
 </head>
 <body>
-  <div class="boot-screen" id="bootScreen" aria-hidden="true">
-    <div class="boot-core"><span></span><span></span><span></span></div>
-    <div class="boot-logo">NOVA<span>.</span></div>
-    <div class="boot-text" id="bootText">INITIALIZING NOVA</div>
-    <div class="boot-bar"><i id="bootProgress"></i></div>
-    <div class="boot-percent" id="bootPercent">0%</div>
-  </div>
+  <div class="boot-screen" id="bootScreen" aria-hidden="true"><div class="boot-core"><span></span><span></span><span></span></div><div class="boot-logo">NOVA<span>.</span></div><div class="boot-text" id="bootText">INITIALIZING NOVA</div><div class="boot-bar"><i id="bootProgress"></i></div><div class="boot-percent" id="bootPercent">0%</div></div>
+  <div class="aurora aurora-one"></div><div class="aurora aurora-two"></div><div class="grid"></div><div class="stars" id="stars"></div>
 
-  <div class="aurora aurora-one"></div>
-  <div class="aurora aurora-two"></div>
-  <div class="grid"></div>
-  <div class="stars" id="stars"></div>
-
-  <header class="topbar">
-    <a class="brand" href="./" aria-label="NOVA home">NOVA<span>.</span></a>
-    <div class="top-right"><span id="date"></span><span class="dot"></span><span id="clock">00:00</span></div>
+  <header class="browser-top">
+    <div class="tab-strip" id="tabStrip">
+      <button class="tab active" data-url="./"><span class="tab-dot nova-dot"></span><span>NOVA</span><span class="tab-close">×</span></button>
+      <button class="tab" data-url="https://www.youtube.com/"><span class="tab-dot youtube-dot"></span><span>YouTube</span><span class="tab-close">×</span></button>
+      <button class="tab" data-url="https://mail.google.com/"><span class="tab-dot gmail-dot"></span><span>Gmail</span><span class="tab-close">×</span></button>
+      <button class="tab" data-url="https://github.com/"><span class="tab-dot github-dot"></span><span>GitHub</span><span class="tab-close">×</span></button>
+      <button class="new-tab" id="newTab" aria-label="New tab">+</button>
+    </div>
+    <div class="browser-controls"><button id="browserBack">‹</button><button id="browserForward">›</button><button id="browserRefresh">↻</button><a class="mini-brand" href="./">NOVA<span>.</span></a><div class="browser-time"><span id="date"></span><span class="dot"></span><span id="clock">00:00</span></div></div>
   </header>
 
-  <main class="home">
-    <section class="hero">
-      <div class="status"><span class="status-dot"></span> SYSTEM ONLINE</div>
-      <p class="eyebrow">YOUR DIGITAL STARTING POINT</p>
-      <h1>NOVA<span>.</span></h1>
-      <p class="subtitle">Search the web, open your apps, and keep everything you need one click away.</p>
-      <form class="search" id="searchForm">
-        <span class="search-icon">⌕</span>
-        <input id="searchInput" type="search" autocomplete="off" placeholder="Search Google or type a URL" aria-label="Search Google">
-        <kbd>Enter</kbd>
-        <button type="submit">Search</button>
-      </form>
-      <div class="shortcuts" aria-label="Shortcuts">
-        <a class="shortcut" href="https://www.google.com/" target="_blank" rel="noopener"><span class="icon google">G</span><span>Google</span></a>
-        <a class="shortcut" href="https://www.youtube.com/" target="_blank" rel="noopener"><span class="icon youtube">▶</span><span>YouTube</span></a>
-        <a class="shortcut" href="https://www.dailymotion.com/" target="_blank" rel="noopener"><span class="icon dm">D</span><span>Dailymotion</span></a>
-        <a class="shortcut" href="https://mail.google.com/" target="_blank" rel="noopener"><span class="icon gmail">M</span><span>Gmail</span></a>
-        <a class="shortcut" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="icon drive">△</span><span>Drive</span></a>
-        <a class="shortcut" href="https://github.com/" target="_blank" rel="noopener"><span class="icon github">⌘</span><span>GitHub</span></a>
-      </div>
-      <button class="search-focus" id="focusSearch" type="button"><span>⌕</span> Focus search</button>
-    </section>
-  </main>
+  <main class="home"><section class="hero">
+    <div class="status"><span class="status-dot"></span> SYSTEM ONLINE</div>
+    <p class="eyebrow">YOUR DIGITAL STARTING POINT</p><h1>NOVA<span>.</span></h1>
+    <p class="subtitle">Search the web, open your apps, and keep everything you need one click away.</p>
+    <form class="search" id="searchForm"><span class="search-icon">⌕</span><input id="searchInput" type="search" autocomplete="off" placeholder="Search Google or type a URL" aria-label="Search Google"><kbd>Enter</kbd><button type="submit">Search</button></form>
+    <div class="shortcuts" aria-label="Shortcuts"><a class="shortcut" href="https://www.google.com/" target="_blank" rel="noopener"><span class="icon google">G</span><span>Google</span></a><a class="shortcut" href="https://www.youtube.com/" target="_blank" rel="noopener"><span class="icon youtube">▶</span><span>YouTube</span></a><a class="shortcut" href="https://www.dailymotion.com/" target="_blank" rel="noopener"><span class="icon dm">D</span><span>Dailymotion</span></a><a class="shortcut" href="https://mail.google.com/" target="_blank" rel="noopener"><span class="icon gmail">M</span><span>Gmail</span></a><a class="shortcut" href="https://drive.google.com/" target="_blank" rel="noopener"><span class="icon drive">△</span><span>Drive</span></a><a class="shortcut" href="https://github.com/" target="_blank" rel="noopener"><span class="icon github">⌘</span><span>GitHub</span></a></div>
+    <button class="search-focus" id="focusSearch" type="button"><span>⌕</span> Focus search</button>
+  </section></main>
 
   <button class="ai-launcher" id="aiLauncher" aria-label="Open NOVA AI"><span class="ai-pulse"></span><span>AI</span></button>
-
   <div class="ai-transition" id="aiTransition" aria-hidden="true"><div class="transition-orb"></div><div class="transition-label">LOADING AI</div></div>
-
-  <div class="ready-modal" id="readyModal" aria-hidden="true">
-    <div class="ready-card">
-      <div class="ready-orb"><span></span></div>
-      <div class="ready-kicker">NOVA AI</div>
-      <h2>Are you ready?</h2>
-      <p>NOVA AI is ready to open its interface.</p>
-      <button id="readyButton" type="button">Enter NOVA AI <span>→</span></button>
-      <button class="cancel-ready" id="cancelReady" type="button">Not now</button>
-    </div>
-  </div>
-
-  <aside class="ai-panel" id="aiPanel" aria-label="NOVA AI">
-    <div class="ai-header">
-      <div class="ai-title"><span class="ai-orb"></span><div><strong>NOVA AI</strong><small>Local interface</small></div></div>
-      <button id="aiClose" aria-label="Close">×</button>
-    </div>
-    <div class="messages" id="messages"><div class="message bot">NOVA AI interface ready. This demo is not connected to an AI service yet.</div></div>
-    <form class="chat-input" id="chatForm"><input id="chatInput" type="text" placeholder="Ask something..." autocomplete="off"><button type="submit" aria-label="Send">→</button></form>
-  </aside>
-
+  <div class="ready-modal" id="readyModal" aria-hidden="true"><div class="ready-card"><div class="ready-orb"><span></span></div><div class="ready-kicker">NOVA AI</div><h2>Are you ready?</h2><p>NOVA AI is ready to open its interface.</p><button id="readyButton" type="button">Enter NOVA AI <span>→</span></button><button class="cancel-ready" id="cancelReady" type="button">Not now</button></div></div>
+  <aside class="ai-panel" id="aiPanel" aria-label="NOVA AI"><div class="ai-header"><div class="ai-title"><span class="ai-orb"></span><div><strong>NOVA AI</strong><small>Local interface</small></div></div><button id="aiClose" aria-label="Close">×</button></div><div class="messages" id="messages"><div class="message bot">NOVA AI interface ready. This demo is not connected to an AI service yet.</div></div><form class="chat-input" id="chatForm"><input id="chatInput" type="text" placeholder="Ask something..." autocomplete="off"><button type="submit" aria-label="Send">→</button></form></aside>
   <footer><span>NOVA</span> · Personal homepage · <span id="year">2026</span></footer>
   <script src="script.js"></script>
-</body>
-</html>
+</body></html>
